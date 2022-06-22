@@ -17,6 +17,7 @@
         <input type="text" id="apellidos" name="apellidos" placeholder="{{ __('apellidos') }}">
         <input type="text" id="genero" name="genero" placeholder="{{ __('genero') }}">
         <input type="text" id="estado_civil" name="estado_civil" placeholder="{{ __('estado_civil') }}">
+        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" placeholder="{{ __('fecha_nacimiento') }}">
         <input type="text" id="edad" name="edad" placeholder="{{ __('edad') }}">
         <input type="text" id="dui" name="dui" placeholder="{{ __('dui') }}">
         <input type="text" id="nit" name="nit" placeholder="{{ __('nit') }}">
@@ -25,7 +26,7 @@
         <input type="text" id="id_profesion" name="id_profesion" placeholder="{{ __('id_profesion') }}">
         <input type="text" id="correo" name="correo" placeholder="{{ __('correo') }}">
         <input type="text" id="nacionalidad" name="nacionalidad" placeholder="{{ __('nacionalidad') }}">
-        <input type="text" id="fecha_ingreso" name="fecha_ingreso" placeholder="{{ __('fecha_ingreso') }}">
+        <input type="date" id="fecha_ingreso" name="fecha_ingreso" placeholder="{{ __('fecha_ingreso') }}">
         <input type="text" id="anios_servicio" name="anios_servicio" placeholder="{{ __('anios_servicio') }}">
         <input type="text" id="tipo_contrato" name="tipo_contrato" placeholder="{{ __('tipo_contrato') }}">
         <input type="text" id="salario" name="salario" placeholder="{{ __('salario') }}">
