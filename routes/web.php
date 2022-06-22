@@ -22,9 +22,7 @@ Route::get('/', function () {
 Route::get('/docentes', function () {
     return view('docentes');
 });
-Route::get('/agregar_docente', function () {
-    return view('agregar_docente');
-});
+Route::get('/agregar_docente', [DocenteController::class, 'insertarDocenteVista']);
 Route::post('/agregar_docente', [DocenteController::class, 'insertarDocente']);
 Route::get('/docentes_a_jubilar', function () {
     return view('docentes_a_jubilar');

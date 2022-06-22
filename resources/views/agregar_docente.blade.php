@@ -23,7 +23,12 @@
         <input type="text" id="nit" name="nit" placeholder="{{ __('nit') }}">
         <input type="text" id="carnet_afp" name="carnet_afp" placeholder="{{ __('carnet_afp') }}">
         <input type="text" id="carnet_seguro" name="carnet_seguro" placeholder="{{ __('carnet_seguro') }}">
-        <input type="text" id="id_profesion" name="id_profesion" placeholder="{{ __('id_profesion') }}">
+        <select name="id_profesion" id="id_profesion">
+            <option value="">Seleccione una profesion</option>
+            @foreach($profesiones as $pr)
+            <option value="{{ $pr['id_profesion'] }}">{{ $pr['nombre_profesion'] }}</option>
+            @endforeach
+        </select>
         <input type="text" id="correo" name="correo" placeholder="{{ __('correo') }}">
         <input type="text" id="nacionalidad" name="nacionalidad" placeholder="{{ __('nacionalidad') }}">
         <input type="date" id="fecha_ingreso" name="fecha_ingreso" placeholder="{{ __('fecha_ingreso') }}">
