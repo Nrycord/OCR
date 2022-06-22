@@ -404,7 +404,6 @@
 </head>
 
 <body class="antialiased">
-<<<<<<< HEAD
 <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0 text-gray-600 dark:text-gray-400">
         
     <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
@@ -439,46 +438,6 @@
                             <li>No hay docentes para mostrar</li>
                         @endforelse
                     </ul>
-=======
-    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0 text-gray-600 dark:text-gray-400">
-
-        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-                <h1>Docentes</h1>
-            </div>
-
-            <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-                <div class="grid grid-cols-1 md:grid-cols-2">
-
-                    <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                        <table class="table:table-dark">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Nombre Completo</th>
-                                    <th scope="col">Fecha Nacimiento</th>
-                                    <th scope="col">DUI</th>
-                                    <th scope="col">NIT</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @forelse($docente as $docenteItem)
-                                <tr>
-                                    <td>{{$docenteItem['nombres']}} {{$docenteItem['apellidos']}}</td>
-                                    <td>{{$docenteItem['fecha_nacimiento']}}</td>
-                                    <td>{{$docenteItem['dui']}}</td>
-                                    <td>{{$docenteItem['nit']}}</td>
-                                </tr>
-                                @empty
-                                <tr>No hay docentes para mostrar</tr>
-                                @endforelse
-                            </tbody>
-                        </table>
-                        <ul>
-
-                        </ul>
-                    </div>
-
->>>>>>> aaeee74bc0fc9648193cc32870b0e43c7fa9c5ab
                 </div>
             </div>
         </div>
