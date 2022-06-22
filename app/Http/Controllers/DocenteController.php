@@ -8,10 +8,18 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 
 use App\Models\Docente;
+use App\Models\Profesiones;
 
 class DocenteController extends Controller
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
+    public function insertarDocenteVista()
+    {
+        $profesiones = (new Profesiones)->get();
+
+        return view('agregar_docente', compact('profesiones'));
+    }
+
     public function insertarDocente(Request $request)
     {
         $docente = new Docente;
