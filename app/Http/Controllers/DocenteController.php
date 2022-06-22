@@ -35,4 +35,22 @@ class DocenteController extends Controller
         $docente->save();
         return "Docente Agregado";
     }
+
+    public function getAllDocentes(){
+
+        $docente = Docente::all();
+
+        //print_r($docente);
+        return view('docentes', ['docente' => $docente]);
+    }
+
+    public function proximosJubilacion(){
+
+        $docente = Docente::join('proximos_jubilacion', 'proximos_jubilacion.id_docente', '=', 'docentes.id_docente')
+            ->select('docentes.nombres', 'docentes.apellidos', 'proximos_jubilacion.tiempo_restante')
+            ->get();
+    
+
+        return view('docentes_a_jubilar', ['docente' => $docente]);
+    }
 }

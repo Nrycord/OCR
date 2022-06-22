@@ -63,7 +63,15 @@
                     </table> -->
                     <ul>
                         @forelse($docente as $docenteItem)
-                            <li>{{$docenteItem->nombres}} {{$docenteItem-apellido}}</li>
+                            <h2>DATOS DOCENTE</h2>
+                            <strong>Nombre Completo:</strong> 
+                            <li>{{$docenteItem['nombres']}} {{$docenteItem['apellidos']}}</li>
+                            <strong>Fecha Nacimiento:</strong> 
+                            <li>{{$docenteItem['fecha_nacimiento']}}</li>
+                            <strong>DUI:</strong> 
+                            <li>{{$docenteItem['dui']}}</li>
+                            <strong>NIT:</strong> 
+                            <li>{{$docenteItem['nit']}}</li>
                         @empty
                             <li>No hay docentes para mostrar</li>
                         @endforelse

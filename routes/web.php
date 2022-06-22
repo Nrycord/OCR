@@ -16,16 +16,11 @@ use App\Http\Controllers\DocenteController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/docentes', function () {
-    return view('docentes');
-});
-Route::get('/agregar_docente', function () {
     return view('agregar_docente');
 });
+
 Route::post('/agregar_docente', [DocenteController::class, 'insertarDocente']);
-Route::get('/docentes_a_jubilar', function () {
-    return view('docentes_a_jubilar');
-});
+
+Route::get('/docentes', [DocenteController::class, 'getAllDocentes']);
+
+Route::get('/docentes_a_jubilar', [DocenteController::class, 'proximosJubilacion']);
