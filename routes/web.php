@@ -15,7 +15,6 @@ use App\Http\Controllers\DocenteController;
 |
 */
 
-
 Route::get('/agregar_docente', [DocenteController::class, 'insertarDocenteVista']);
 Route::post('/agregar_docente', [DocenteController::class, 'insertarDocente']);
 
