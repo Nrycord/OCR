@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\DocenteController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,8 +25,7 @@ Route::get('/docentes', function () {
 Route::get('/agregar_docente', function () {
     return view('agregar_docente');
 });
-Route::post('/agregar_docente', function () {
-});
+Route::post('/agregar_docente', [DocenteController::class, 'insertarDocente']);
 Route::get('/docentes_a_jubilar', function () {
     return view('docentes_a_jubilar');
 });
