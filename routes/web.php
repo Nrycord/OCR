@@ -21,7 +21,7 @@ Route::get('/docentes', function () {
     return view('docentes');
 });
 Route::get('/agregar_docente', function () {
-    return view('agregarDocente');
+    return view('agregar_docente');
 });
 Route::post('/agregar_docente', function () {
 });
