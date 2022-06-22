@@ -4,6 +4,8 @@
 <head>
     <!-- Required meta tags -->
    <!-- Fonts -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
@@ -26,41 +28,19 @@
         <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
             <h1>Docentes Proximos a Jubilar</h1>
         </div>
+        <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+            <a class="btn btn-primary m-2" data-toggle="collapse" href="/agregar_docente" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Agregar docente
+            </a>
+            <a class="btn btn-primary m-2" data-toggle="collapse" href="/docentes" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Ver todos los docentes
+            </a>
+        </div>
 
-        <div class="mt-8 bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+        <div class="mt-8 dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
             <div class="grid grid-cols-1 md:grid-cols-2">
                 
                 <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                    <!-- <table class="table:table-dark">
-                        <thead>
-                            <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            <th scope="col">Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <th scope="row">1</th>
-                            <td>Mark</td>
-                            <td>Otto</td>
-                            <td>@mdo</td>
-                            </tr>
-                            <tr>
-                            <th scope="row">2</th>
-                            <td>Jacob</td>
-                            <td>Thornton</td>
-                            <td>@fat</td>
-                            </tr>
-                            <tr>
-                            <th scope="row">3</th>
-                            <td>Larry</td>
-                            <td>the Bird</td>
-                            <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table> -->
                     <ul>
                         @forelse($docente as $docenteItem)
                             <h2>DATOS DOCENTE JUBILACION</h2>
