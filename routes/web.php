@@ -26,5 +26,5 @@ Route::get('/agregar_docente', function () {
 Route::post('/agregar_docente', function () {
 });
 Route::get('/docentes_a_jubilar', function () {
-    return view('docentesAJubilar');
+    return view('docentes_a_jubilar');
 });
