@@ -10,12 +10,13 @@
 
 </head>
 
-<body>
+<body class="bg-gray">
     <div class="h-100 d-flex align-items-center justify-content-center">
 
 
 
         <form method="POST" action="{{ url('/agregar_docente') }}">
+            @csrf
             <h2 class="font-weight-light">------Registre un nuevo docente------</h2>
             <a class="btn btn-primary m-2" data-toggle="collapse" href="/docentes_a_jubilar" role="button" aria-expanded="false" aria-controls="collapseExample">
                 Ver docentes Proximos a Jubilarse
@@ -36,12 +37,20 @@
 
             <div class="form-group">
                 <label for="street2_id" class="control-label">Genero</label>
-                <input type="text" class="form-control" id="genero" name="genero" placeholder="{{ __('genero') }}">
+                <select class="form-control" name="genero" id="genero">
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <label for="street2_id" class="control-label">Estado Civil</label>
-                <input type="text" class="form-control" id="estado_civil" name="estado_civil" placeholder="{{ __('estado_civil') }}">
+                <select class="form-control" name="estado_civil" id="estado_civil">
+                    <option value="Soltero/a">Soltero/a</option>
+                    <option value="Casado/a">Casado/a</option>
+                    <option value="Divorciado/a">Divorciado/a</option>
+                    <option value="Viudo/a">Viudo/a</option>
+                </select>
             </div>
 
             <div class="form-group">
@@ -51,7 +60,7 @@
 
             <div class="form-group">
                 <label for="street2_id" class="control-label">Edad</label>
-                <input type="text" class="form-control" id="edad" name="edad" placeholder="{{ __('edad') }}">
+                <input type="number" class="form-control" id="edad" name="edad" placeholder="{{ __('edad') }}">
             </div>
 
             <div class="form-group">
@@ -101,17 +110,22 @@
 
             <div class="form-group">
                 <label for="zip_id" class="control-label">Años de servicio</label>
-                <input type="text" class="form-control" id="anios_servicio" name="anios_servicio" placeholder="{{ __('anios_servicio') }}">
+                <input type="number" class="form-control" id="anios_servicio" name="anios_servicio" placeholder="{{ __('anios_servicio') }}">
             </div>
 
             <div class="form-group">
                 <label for="zip_id" class="control-label">Tipo de Contrato</label>
-                <input type="text" class="form-control" id="tipo_contrato" name="tipo_contrato" placeholder="{{ __('tipo_contrato') }}">
+                <select class="form-control" name="tipo_contrato" id="tipo_contrato">
+                    <option value="Plaza_fija">Plaza Fija</option>
+                    <option value="Por_contrato">Por Contrato</option>
+                    <option value="Horas_clase">Horas Clase</option>
+                    <option value="Eventual">Eventual</option>
+                </select>
             </div>
 
             <div class="form-group">
                 <label for="zip_id" class="control-label">Salario</label>
-                <input type="number" class="form-control" id="salario" name="salario" placeholder="{{ __('salario') }}">
+                <input type="number" step="any" class="form-control" id="salario" name="salario" placeholder="{{ __('salario') }}">
             </div>
 
             <div class="form-group">

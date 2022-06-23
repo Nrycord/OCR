@@ -15,7 +15,7 @@ class DocenteController extends Controller
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
     public function insertarDocenteVista()
     {
-        $profesiones = (new Profesiones)->get()->orderBy('id_docente', 'DESC');
+        $profesiones = (new Profesiones)->get();
 
         return view('agregar_docente', compact('profesiones'));
     }
@@ -47,7 +47,7 @@ class DocenteController extends Controller
     public function getAllDocentes()
     {
 
-        $docente = Docente::all();
+        $docente = Docente::orderBy('id_docente', 'DESC')->get();
 
         //print_r($docente);
         return view('docentes', ['docente' => $docente]);
@@ -58,6 +58,7 @@ class DocenteController extends Controller
 
         $docente = Docente::join('proximos_jubilacion', 'proximos_jubilacion.id_docente', '=', 'docentes.id_docente')
             ->select('docentes.nombres', 'docentes.apellidos', 'proximos_jubilacion.tiempo_restante')
+            ->orderBy('id_jubilacion', 'DESC')
             ->get();
 
 
