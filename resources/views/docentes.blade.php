@@ -3,10 +3,10 @@
 
 <head>
     <!-- Required meta tags -->
-   <!-- Fonts -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Fonts -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
     <style>
@@ -400,48 +400,48 @@
             font-family: 'Nunito', sans-serif;
         }
     </style>
-    <title>Majestic Admin</title>
+    <title>Docentes</title>
 </head>
 
 <body class="antialiased">
-<div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0 text-gray-600 dark:text-gray-400">
-        
-    <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-        <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-            <h1>Docentes</h1>
-        </div>
-        <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
-            <a class="btn btn-primary m-2" data-toggle="collapse" href="/agregar_docente" role="button" aria-expanded="false" aria-controls="collapseExample">
-                Agregar docente
-            </a>
-            <a class="btn btn-primary m-2" data-toggle="collapse" href="/docentes_a_jubilar" role="button" aria-expanded="false" aria-controls="collapseExample">
-                Ver docentes Proximos a Jubilarse
-            </a>
-        </div>
+    <div class="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0 text-gray-600 dark:text-gray-400">
 
-        <div class="mt-8 dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
-            <div class="grid grid-cols-1 md:grid-cols-2">
-                
-                <div class="p-6 border-t border-gray-200 dark:border-gray-700">
-                    <ul>
-                        @forelse($docente as $docenteItem)
+        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
+            <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+                <h1>Docentes</h1>
+            </div>
+            <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
+                <a class="btn btn-primary m-2" data-toggle="collapse" href="/agregar_docente" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Agregar docente
+                </a>
+                <a class="btn btn-primary m-2" data-toggle="collapse" href="/docentes_a_jubilar" role="button" aria-expanded="false" aria-controls="collapseExample">
+                    Ver docentes Proximos a Jubilarse
+                </a>
+            </div>
+
+            <div class="mt-8 dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+
+                    <div class="p-6 border-t border-gray-200 dark:border-gray-700">
+                        <ul>
+                            @forelse($docente as $docenteItem)
                             <h2>DATOS DOCENTE</h2>
-                            <strong>Nombre Completo:</strong> 
+                            <strong>Nombre Completo:</strong>
                             <li>{{$docenteItem['nombres']}} {{$docenteItem['apellidos']}}</li>
-                            <strong>Fecha Nacimiento:</strong> 
+                            <strong>Fecha Nacimiento:</strong>
                             <li>{{$docenteItem['fecha_nacimiento']}}</li>
-                            <strong>DUI:</strong> 
+                            <strong>DUI:</strong>
                             <li>{{$docenteItem['dui']}}</li>
-                            <strong>NIT:</strong> 
+                            <strong>NIT:</strong>
                             <li>{{$docenteItem['nit']}}</li>
-                        @empty
+                            @empty
                             <li>No hay docentes para mostrar</li>
-                        @endforelse
-                    </ul>
+                            @endforelse
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 
 </html>
