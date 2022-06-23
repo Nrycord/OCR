@@ -10,8 +10,8 @@
 
 </head>
 
-<body class="bg-gray">
-    <div class="h-100 d-flex align-items-center justify-content-center">
+<body class="bg-secondary">
+    <div class="text-light h-100 d-flex align-items-center justify-content-center">
 
 
 
